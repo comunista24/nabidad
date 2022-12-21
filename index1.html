@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>
+    Santa letter
+  </title>
+</head>
+
+
+<style>
+  body {
+  background-image: url(https://i.ibb.co/gRHDk41/Red-christmas-horizontal-background.jpg);
+  background-size: cover;
+}
+
+h1 {
+  color: white;
+  text-align: center;
+  font-family: "Mountains of Christmas", cursive;
+  font-size: 50px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+#description {
+  color: white;
+  text-align: center;
+  font-size: 18px;
+  font-family: "Mountains of Christmas", cursive;
+  margin-top: 0;
+  margin-bottom: 25px;
+}
+
+hr {
+  border: 1px solid white;
+  width: 95%;
+}
+
+fieldset {
+  border: none;
+}
+
+#survey-form {
+  color: white;
+  font-family: "Mountains of Christmas", cursive;
+  font-size: 22px;
+  /*background: rgba(214, 55, 55, 0.95);*/
+  background: #a30112f2;
+  max-width: 550px;
+  margin: 2rem auto;
+  border: 2px solid white;
+  border-radius: 10px;
+  padding: 2rem;
+}
+
+.container {
+  display: block;
+}
+
+#name,
+#email,
+#number,
+#dropdown {
+  margin-bottom: 15px;
+  width: 100%;
+  height: 2em;
+  border: none;
+}
+
+.checkbox-label {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.button-label,
+.checkbox-label {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.text-area-label {
+  margin-bottom: 2px;
+  margin-top: 2rem;
+}
+
+textarea {
+  width: 100%;
+  height: 100px;
+  font-family: sans-serif;
+  font-size: 16px;
+}
+
+a {
+  color: white;
+}
+
+a:visited {
+  color: #62df62;
+}
+
+a:hover {
+  color: #62df62;
+}
+#submit {
+  display: block;
+  margin: 2rem auto 2px auto;
+  padding: 15px;
+  width: 300px;
+  background: #a30112;
+  color: white;
+  font-size: 25px;
+  font-family: "Mountains of Christmas", cursive;
+  border: 4px solid white;
+  cursor: pointer;
+}
+
+#submit:hover {
+  background: white;
+  color: #a30112;
+  border: 4px solid #a30112;
+}
+</style>
+
+<form id="survey-form">
+
+  <h1 id="title">Carta a San Nicol&aacute;s</h1>
+  <p id="description">Cu&eacute;ntale a Santa c&oacute;mo de bueno has sido y que quieres que te traiga</p>
+  <fieldset>
+    <label class="container" id="name-label" for="name">Nombre</label>
+    <input id="name" type="text" placeholder="Introduce tu nombre" required>
+
+    <label class="container" id="email-label" for="email">Email</label>
+    <input id="email" type="email" placeholder="Introduce tu direcci&oacute;n de correo electr&oacute;nico" required>
+
+    <label class="container" id="number-label" for="number">Edad</label>
+    <input id="number" type="number" min="1" max="120" placeholder="Introduce tu edad">
+
+    <label class="container" for="dropdown">G&eacute;nero</label>
+    <select id="dropdown">
+      <option disabled selected value>Select gender</option>
+      <option value="boy">Chico</option>
+      <option value="girl">Chica</option>
+      <option value="other">Otro</option>
+      <option value="prefer-not-to-say">Prefiero no decirla</option>
+    </select>
+  </fieldset>
+  <hr>
+  <fieldset>
+    <p>A qu&eacute; lista perteneces</p>
+    <label for="nice-list" class="button-label container">
+      <input id="nice-list" type="radio" name="radio-buttons" value="nice" checked>Lista de niños buenos
+    </label>
+    <label for="naughty-list" class="button-label container">
+      <input id="naughty-list" type="radio" name="radio-buttons" value="naughty">Lista de niños malos
+    </label>
+    <label for="other-neither" class="button-label container">
+      <input id="other-neither" type="radio" name="radio-buttons" value="other">Creo en Dios, no en la Navidad
+    </label>
+    <label for="other-neither" class="button-label container">
+      <input id="other-neither" type="radio" name="radio-buttons" value="other">La soberan&iacute;a del pueblo vencer&aacute;
+    </label>
+  </fieldset>
+  <hr>
+  <fieldset>
+    <label for="txt-area" class="container text-area-label">Algo mas que quieras decirle a Santa</label>
+    <textarea id="txt-area" placeholder="Querido Santa,"></textarea>
+  </fieldset>
+  <fieldset>
+    <label for="checkbox1" class="container checkbox-label">
+      <input type="checkbox" id="checkbox1" name="checkbox1" value="verify-guardian" required>Tengo permiso de mi padre/ de mi protector
+    </label>
+    <label for="checkbox2" class="container checkbox-label">
+      <input type="checkbox" id="checkbox2" name="checkbox2" value="terms-conditions" required>Larga vida al <a href="https://sociologia1unpsjb.files.wordpress.com/2008/03/marx-manifiesto-comunista.pdf">manifiesto comunista</a>
+    </label>
+  </fieldset>
+  <button id="submit" name="send" type="submit" class="container ">SEND!</button>
+</form>
+</html>
